@@ -1,17 +1,18 @@
+
 from __future__ import absolute_import
 import subprocess
 
 from setuptools import setup
 
-try:
-    pandoc = subprocess.Popen(['pandoc', 'README.md', '--to', 'rst'],
-                              stdout=subprocess.PIPE)
+#try:
+#    pandoc = subprocess.Popen(['pandoc', 'README.md', '--to', 'rst'],
+#                              stdout=subprocess.PIPE)
 
-    readme = pandoc.communicate()[0].decode()
+#    readme = pandoc.communicate()[0].decode()
 
-except OSError:
-    with open('README.md') as f:
-        readme = f.read()
+#except OSError:
+with open('README.md') as f:
+    readme = f.read()
 
 setup(
     name="notedown",
