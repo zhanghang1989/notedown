@@ -15,15 +15,15 @@ with open('README.md') as f:
     readme = f.read()
 
 setup(
-    name="notedown",
-    version="1.5.0",
-    description="Convert markdown to IPython notebook.",
+    name="mu-notedown",
+    version="2.0.0",
+    description="A fork of notedown",
     long_description=readme,
     packages=['notedown'],
-    author="Aaron O'Leary",
-    author_email='dev@aaren.me',
+    author="Mu Li",
+    author_email='muli.cmu@gmail.com',
     license='BSD 2-Clause',
-    url='http://github.com/aaren/notedown',
+    url='http://github.com/mli/notedown',
     install_requires=['nbformat',
                       'nbconvert',
                       'pandoc-attributes',

@@ -201,7 +201,9 @@ class MarkdownReader(NotebookReader):
                                                 block['icontent'] +
                                                 '\n'))
 
-        elif self.match == 'strict' and 'input' not in attr.classes:
+        elif (self.match == 'strict'
+              and 'input' not in attr.classes
+              and 'output' not in attr.classes):
             return self.new_text_block(content=block['raw'])
 
         elif self.match not in list(attr.classes) + ['fenced', 'strict']:
