@@ -89,7 +89,7 @@ def convert(content, informat, outformat, strip_outputs=False):
     readers = {'notebook': nbformat,
                'markdown': MarkdownReader(precode='',
                                           magic=False,
-                                          match='fenced')
+                                          match='strict')
                }
 
     writers = {'notebook': nbformat,
