@@ -43,8 +43,8 @@ def strip(notebook):
             cell.execution_count = None
 
 
-def run(notebook, timeout=30):
-    executor = ExecutePreprocessor(timeout=timeout)
+def run(notebook, timeout=30, store_widget_state=True):
+    executor = ExecutePreprocessor(timeout=timeout, store_widget_state=store_widget_state)
     notebook, resources = executor.preprocess(notebook, resources={})
 
 
